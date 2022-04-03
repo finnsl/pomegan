@@ -21,8 +21,15 @@ The differences between these two model implementations are the following: the f
 
 The weights for all three models can be found at the following [link](https://drive.google.com/drive/folders/1GlZp5CPB89MAnKI9LDZUdFqiTV9nnAFh?usp=sharing) (they are considerable in size)
 
-The latter was an experiment in how the performance changes with the changes to the latent dimension and the number of filters - I saw a training time improvement of 20% over the out-of-the-box version, but suffered a slight worsening of the FID score over the same training period (both trained for approximately 700k images, which is well below the thresholds the paper/repository on stylegan2 suggests would give satisfactory results, but were what was available using the machine from google colab pro, which had considerably less computing power than was available to the nvidialabs team).
+The latter was an experiment in how the performance changes with the changes to the latent dimension and the number of filters - I saw a training time improvement of 20% over the out-of-the-box version, but suffered a slight worsening of the FID score over the same training period (both trained for approximately 700k images, which is well below the thresholds the paper/repository on stylegan2 suggests would give satisfactory results, but were what was available using the machine from google colab pro, which had considerably less computing power than was available to the nvidialabs team). Both models obtained a FID Score of around 58 after this limited training time.
+
+The training for the weights provided above were ~13h for the unsupervised, out-of-the-box model, and ~11h for the modified smaller model, and all the computations were done on a high ram/gpu instance from google colab pro (with a single P100 GPU). 
 
 Sample output from stylegan2 (128 image batch outputs from scoring) can be found for the later steps in output/stylegan2.
 
-The current implementations of the models in all cases can be found in juypter notebooks in the main directory. 
+The current implementations of the models in all cases can be found in juypter notebooks in the main directory. Paths to the files (in drive, currently) need to be changed to point to the appropriate places (after downloading the weights) for independent running.
+
+## TODO:
+1. Find a better solution for storing the weights
+2. Modify the code in the notebooks to make it relative pathing
+3. Replace the notebooks with three scripts that execute the training, generation and dataset preparation for each model.
