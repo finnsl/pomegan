@@ -1,7 +1,7 @@
 # Pomegan- GAN models for generating "USDA pomological watercolors"
 In this repositiory you'll find two approaches to generating fake watercolor fruit based on the characteristics of the "USDA pomological watercolor collection" - this consists of 7580 watercolor images of a variety of different fruits, all painted around 1900. The collection, in a smaller, lower resolution format, is available on github in a repository of [jwilber](https://github.com/jwilber/USDA_Pomological_Watercolors). The images are available also in a higher resolution format [here](https://archive.org/download/usda-pomological-watercolor-collection).
 
-![Teaser image](./output/from_scratch/original-watercolours-first128.png
+![Teaser image](./output/from_scratch/original-watercolours-first128.png)
 
 ## Model 1
 
